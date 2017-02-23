@@ -8,5 +8,7 @@ before_install:
   - sudo apt-get install glide -y
 install:
   - glide install
+  - go get github.com/GeertJohan/go.rice/rice
+  - cd pkg && rice embed-go
 script:
   - go test -v $(glide novendor)

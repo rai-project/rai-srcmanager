@@ -1,5 +1,5 @@
-hash: d8a2dd91d0e71f3114538156b5e683bb03acd73074292ab197729e06453a818a
-updated: 2017-02-23T09:50:59.843974517-06:00
+hash: e4507ba0e33dc98684ab1ee55b1a08e2a8ae098f6e272abf900d5db0d86350fd
+updated: 2017-02-23T09:55:47.056441592-06:00
 imports:
 - name: github.com/daaku/go.zipexe
   version: a5fe2436ffcb3236e175e5149162b41cd28bd27d
@@ -7,6 +7,7 @@ imports:
   version: 9fdfd46f9806a9228aae341d65ab75c5235c383c
   subpackages:
   - embedded
+  - rice
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
 - name: github.com/kardianos/osext
