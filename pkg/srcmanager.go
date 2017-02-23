@@ -1,5 +1,3 @@
-//go:generate rice embed-go
-
 package srcmanager
 
 import (
@@ -12,7 +10,6 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/GeertJohan/go.rice"
 	log "github.com/Sirupsen/logrus"
 	"github.com/Unknwon/com"
 	glob "github.com/mattn/go-zglob"
@@ -20,8 +17,7 @@ import (
 
 var (
 	gopath       = com.GetGOPATHs()[0]
-	riceBox      = rice.MustFindBox("..")
-	repositories = riceBox.MustString("repositories")
+	repositories = _escFSMustString(false, "/repositories")
 	Verbose      = false
 )
 

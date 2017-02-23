@@ -1,8 +1,5 @@
 package: github.com/rai-project/rai-srcmanager
 import:
-- package: github.com/GeertJohan/go.rice
-  subpackages:
-  - rice
 - package: github.com/Sirupsen/logrus
   version: ~0.11.2
 - package: github.com/Unknwon/com
@@ -13,3 +10,4 @@ import:
 - package: github.com/spf13/cobra
 - package: github.com/x-cray/logrus-prefixed-formatter
   version: ~0.3.2
+- package: github.com/mjibson/esc
