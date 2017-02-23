@@ -1,6 +1,5 @@
-[![wercker status](https://app.wercker.com/status/94dd4b8a0c490fccd899e59cee34c671/m/master "wercker status")](https://app.wercker.com/project/byKey/94dd4b8a0c490fccd899e59cee34c671)
 
-# README #
+# README [![Build Status](https://travis-ci.org/rai-project/rai-srcmanager.svg?branch=master)](https://travis-ci.org/rai-project/rai-srcmanager)
 
 ## What is this repository for?
 
