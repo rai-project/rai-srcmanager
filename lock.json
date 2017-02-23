@@ -1,0 +1,125 @@
+{
+    "memo": "1ea6d242ef7d86eb9a72855a555524080ada2770a49e2c8afbd59cdca54ff8d1",
+    "projects": [
+        {
+            "name": "github.com/GeertJohan/go.rice",
+            "branch": "master",
+            "revision": "4bbccbfa39e784796e483270451217d3369ecfbe",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/Sirupsen/logrus",
+            "branch": "master",
+            "revision": "7f4b1adc791766938c29457bed0703fb9134421a",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/Unknwon/com",
+            "branch": "master",
+            "revision": "0db4a625e949e956314d7d1adea9bf82384cc10c",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/daaku/go.zipexe",
+            "branch": "master",
+            "revision": "a5fe2436ffcb3236e175e5149162b41cd28bd27d",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/inconshreveable/mousetrap",
+            "branch": "master",
+            "revision": "76626ae9c91c4f2a10f34cad8ce83ea42c93bb75",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/kardianos/osext",
+            "branch": "master",
+            "revision": "9b883c5eb462dd5cb1b0a7a104fe86bc6b9bd391",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/mattn/go-colorable",
+            "version": "v0.0.7",
+            "revision": "d228849504861217f796da67fae4f6e347643f15",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/mattn/go-isatty",
+            "version": "v0.0.1",
+            "revision": "3a115632dcd687f9c8cd01679c83a06a0e21c1f3",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/mattn/go-zglob",
+            "branch": "master",
+            "revision": "95345c4e1c0ebc9d16a3284177f09360f4d20fab",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/mgutz/ansi",
+            "branch": "master",
+            "revision": "9520e82c474b0a04dd04f8a40959027271bab992",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/pkg/errors",
+            "branch": "master",
+            "revision": "248dadf4e9068a0b3e79f02ed0a610d935de5302",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/spf13/cobra",
+            "branch": "master",
+            "revision": "ee4055870c2d5f7ce112642377e32c9929c3bbaf",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/spf13/pflag",
+            "branch": "master",
+            "revision": "9ff6c6923cfffbcd502984b8e0c80539a94968b7",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/x-cray/logrus-prefixed-formatter",
+            "version": "v0.3.2",
+            "revision": "9cd0cf058806896bf8ca66f9a957d36bd9e4ce0f",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "golang.org/x/sys",
+            "branch": "master",
+            "revision": "075e574b89e4c2d22f2286a7e2b919519c6f3547",
+            "packages": [
+                "unix"
+            ]
+        }
+    ]
+}

@@ -1,5 +1,5 @@
-hash: c7bcc5f2adf018b6a8f85535cc2d6ec407d05310d7f41637af11461508f93a4d
-updated: 2016-11-29T20:10:25.558497989-06:00
+hash: d8a2dd91d0e71f3114538156b5e683bb03acd73074292ab197729e06453a818a
+updated: 2017-02-23T09:50:59.843974517-06:00
 imports:
 - name: github.com/daaku/go.zipexe
   version: a5fe2436ffcb3236e175e5149162b41cd28bd27d
@@ -18,17 +18,17 @@ imports:
 - name: github.com/pkg/errors
   version: 645ef00459ed84a119197bfb8d8205042c6df63d
 - name: github.com/Sirupsen/logrus
-  version: d26492970760ca5d33129d2d799e34be5c4782eb
+  version: c078b1e43f58d563c74cebe63c85789e76ddb627
 - name: github.com/spf13/cobra
-  version: 9495bc009a56819bdb0ddbc1a373e29c140bc674
+  version: 312092086bed4968099259622145a0c9ae280064
 - name: github.com/spf13/pflag
-  version: 5ccb023bc27df288a957c5e994cd44fd19619465
+  version: 5644820622454e71517561946e3d94b9f9db6842
 - name: github.com/Unknwon/com
   version: 28b053d5a2923b87ce8c5a08f3af779894a72758
 - name: github.com/x-cray/logrus-prefixed-formatter
-  version: 1d837bc239d1686e1ae281c4629495bd0e7da8d5
+  version: 9cd0cf058806896bf8ca66f9a957d36bd9e4ce0f
 - name: golang.org/x/sys
-  version: b699b7032584f0953262cb2788a0ca19bb494703
+  version: e24f485414aeafb646f6fca458b0bf869c0880a1
   subpackages:
   - unix
 testImports: []

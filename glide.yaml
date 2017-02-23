@@ -1,8 +1,8 @@
-package: github.com/rai-project/srcmanager
+package: github.com/rai-project/rai-srcmanager
 import:
 - package: github.com/GeertJohan/go.rice
 - package: github.com/Sirupsen/logrus
-  version: ~0.11.0
+  version: ~0.11.2
 - package: github.com/Unknwon/com
   version: ~1.0.0
 - package: github.com/mattn/go-zglob
@@ -10,3 +10,4 @@ import:
   version: ~0.8.0
 - package: github.com/spf13/cobra
 - package: github.com/x-cray/logrus-prefixed-formatter
+  version: ~0.3.2
