@@ -190,18 +190,18 @@ var _escData = map[string]*_escFile{
 
 	"/repositories": {
 		local:   "../repositories",
-		size:    1031,
-		modtime: 1487886754,
+		size:    1081,
+		modtime: 1487983701,
 		compressed: `
-H4sIAAAJbogA/3zTUY7zIAwE4Pf/Lm2P9MsBl8wWcGRMdrunX0Xq6/Bm6XPEkBEFsc/tnqw9XHA73L40
-xUM87Tj1H+MZO7XvwWhze6kzTRXag2rLlKw/UajOLOhPY54lZJNB75otLUJrE1SGxa5oXLOF9pP5rlL5
-b645Sdpp6mql8NRNw5FoT/1EhtxGw3rjv/4c5sHPOeY25sb0mtelX/NL30X7auMz3z8roFW7hFY08PO0
-YIS/mQ91SMUvv/FQPxca5rSycEn80zkWFqi0zDlBX86JQz2kjL8AAAD//x+vkicHBAAA
+H4sIAAAAAAAA/3zSUY7CMAwE0H/uAkh7oZWbmHQgiSvH6cKeHiHxO/2L9Jx26mlBrHO5JGtXF5w3t7um
+uIqnFbueGM9Yqf0NRovbQ51pqtAeVFumZP2GQnVmQb8Z8ywhiwz6rdnSQWhtgsqw2Cca12yhfWe+qlS+
+5pqTpJWmrlYKT900HIn21HdkyHk0HE/86nMzD/6ebS5jLkxd6PNdQOv+nB/6KtqPJr7ny3cEtH+X0IoG
++ue5FozwF/OhDqn452sY6vuBhjntMVwSvzrHgQUqbXhOvt8dm3pIoZef959xegcAAP//tAfeyTkEAAA=
 `,
 	},
 
 	"/": {
 		isDir: true,
-		local: "/",
+		local: "",
 	},
 }

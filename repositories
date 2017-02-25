@@ -18,7 +18,8 @@ github.com/rai-project/metrics
 github.com/rai-project/nvidia-smi
 github.com/rai-project/nvidia_exporter
 github.com/rai-project/pubsub
-github.com/rai-project/rai-client
+github.com/rai-project/rai
+github.com/rai-project/raid
 github.com/rai-project/rai-keygen
 github.com/rai-project/rai-project.github.io
 github.com/rai-project/ratelimit
