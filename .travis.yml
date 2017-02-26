@@ -13,6 +13,8 @@ install:
 script:
   - go test -v $(glide novendor)
 before_deploy:
+  - ls
+  - go build
   - export FILE_TO_UPLOAD=rai-srcmanager
 deploy:
   provider: releases
