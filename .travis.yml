@@ -13,10 +13,8 @@ install:
 script:
   - go test -v $(glide novendor)
   - go build
-  - pwd
-  - ls
 before_deploy:
-  - ls
+  - echo "this is a placeholder"
 deploy:
   provider: releases
   api_key:
