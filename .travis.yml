@@ -12,3 +12,14 @@ install:
   - cd pkg && go generate
 script:
   - go test -v $(glide novendor)
+before_deploy:
+  - export FILE_TO_UPLOAD=rai-srcmanager
+deploy:
+  provider: releases
+  api_key:
+    - secure: "V9z9jUZ2bkXoGX+YZJkUWecpxZNsnEPbMqaQChiUWioRukrEg/dR2njPeMgOkhKoiidFuVcL42jto9BvSeHK3KvfqGp1aVvKW74FEuCorQqTn2isJUU3sVc7/i45/whv8+81BP5QhHemSiiaBeJvswCZlK0W9md7fH4blRWJ7haYfgUqAbd5mIuJdcfiMVdmt14nBmbiWBEwxSyZRDcSidiX59VgHMVyHTzvCmwFqHFujiRjw4LOwRuNEw+yJC1OPocj8RDP2wUPrMi5IgttPEV0jrzEoG7ZWW2SRhLRI+Ke8vrN7DoHuejIwRgtBCT1D7dYNzLzzrJEoBslsNtwBGL9lKYc9LEDS4OXfp03m1sPymzEWAkDBup/+vk9yFZrd1RfWP0FjBVqJddFsIBw3LtLlBllZuTKf5blVSUFryMG5e9zjBdv4n8w8Zb+ZDmQUkzcmBCJ0G+tm6eaUMOFoDR8VG3w7bnzFpYMv3YdpLfjDB15A/n5CK6zqxyHk7enpKp6I0a1RXb46MdwgvltWEPc6XMJIsIWkU4lnnvSiZWWJBTmpOLaUWNvwwGlxOWWDDPXDaynMeO9PyeZb5Gd0ukLv4l6xbKGub8SrnJuQE+HJXz/thUHpaCU5Jrh0HH8TDB+9fjZ9aI2tmvPtSd74mKBtKa44PMWE3qCQvVdL9Y="
+  file_glob: true
+  file: "${FILE_TO_UPLOAD}"
+  skip_cleanup: true
+  on:
+    tags: true
