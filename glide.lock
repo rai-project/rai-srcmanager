@@ -1,8 +1,14 @@
-hash: 96750676c567b962b648bdb3ac52a988f30686fe459e887f8ad90f219310112e
-updated: 2017-03-02T05:47:13.37909734-06:00
+hash: 88f417622a7210d358e7f9b43c64c80f84919e24a886bfe9cf7cf3e0742544db
+updated: 2017-03-02T08:35:59.331201663-06:00
 imports:
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/k0kubun/pp
+  version: 027a6d1765d673d337e687394dbe780dd64e2a1e
+- name: github.com/mattn/go-colorable
+  version: 5411d3eea5978e6cdc258b30de592b60df6aba96
+- name: github.com/mattn/go-isatty
+  version: dda3de49cbfcec471bd7a70e6cc01fcc3ff90109
 - name: github.com/mattn/go-zglob
   version: 2dbd7f37a45e993d5180a251b4bdd314d6333b70
 - name: github.com/mgutz/ansi
