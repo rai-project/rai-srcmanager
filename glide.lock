@@ -1,5 +1,5 @@
-hash: 38ce9d2fa22dead084abdecbd673b01512e8f887d67c39baa8251cf9679ed2c7
-updated: 2017-02-23T15:56:01.868849799-06:00
+hash: 96750676c567b962b648bdb3ac52a988f30686fe459e887f8ad90f219310112e
+updated: 2017-03-02T05:47:13.37909734-06:00
 imports:
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
@@ -7,12 +7,10 @@ imports:
   version: 2dbd7f37a45e993d5180a251b4bdd314d6333b70
 - name: github.com/mgutz/ansi
   version: c286dcecd19ff979eeb73ea444e479b903f2cfcb
-- name: github.com/mjibson/esc
-  version: 325f7960f7784b0ce5e2c821ee1e7dca5b435ba1
 - name: github.com/pkg/errors
   version: 645ef00459ed84a119197bfb8d8205042c6df63d
 - name: github.com/Sirupsen/logrus
-  version: c078b1e43f58d563c74cebe63c85789e76ddb627
+  version: 0208149b40d863d2c1a2f8fe5753096a9cf2cc8b
 - name: github.com/spf13/cobra
   version: 312092086bed4968099259622145a0c9ae280064
 - name: github.com/spf13/pflag

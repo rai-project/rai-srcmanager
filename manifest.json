@@ -1,0 +1,22 @@
+{
+    "dependencies": {
+        "github.com/Sirupsen/logrus": {
+            "branch": "master"
+        },
+        "github.com/Unknwon/com": {
+            "branch": "master"
+        },
+        "github.com/mattn/go-zglob": {
+            "branch": "master"
+        },
+        "github.com/pkg/errors": {
+            "branch": "master"
+        },
+        "github.com/spf13/cobra": {
+            "branch": "master"
+        },
+        "github.com/x-cray/logrus-prefixed-formatter": {
+            "branch": "master"
+        }
+    }
+}

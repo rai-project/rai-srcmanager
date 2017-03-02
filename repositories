@@ -15,6 +15,7 @@ github.com/rai-project/health
 github.com/rai-project/ldcache
 github.com/rai-project/logger
 github.com/rai-project/metrics
+github.com/rai-project/model
 github.com/rai-project/nvidia-smi
 github.com/rai-project/nvidia_exporter
 github.com/rai-project/pubsub
