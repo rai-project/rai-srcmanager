@@ -12,6 +12,7 @@ import (
 
 var (
 	Verbose bool
+	version Version
 	// RootCmd represents the base command when called without any subcommands
 	RootCmd = &cobra.Command{
 		Use:   "rai-srcmanager",
@@ -21,7 +22,8 @@ var (
 
 // Execute adds all child commands to the root command sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
-func Execute() {
+func Execute(v Version) {
+	version = v
 	if Verbose {
 		log.SetLevel(log.DebugLevel)
 	} else {
