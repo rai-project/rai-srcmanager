@@ -11,7 +11,7 @@ var licenseCmd = &cobra.Command{
 	Use:   "license",
 	Short: "Displays the project license.",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(_escFSMustString(false, "/LICENSE.TXT"))
+		fmt.Println(_escFSMustString(false, "/LICENSE.txt"))
 	},
 }
 
