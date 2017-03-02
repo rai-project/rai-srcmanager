@@ -14,7 +14,7 @@ install:
   - cd cmd && go generate && cd -
   - cd pkg && go generate && cd -
 script:
-  - CGO_ENABLED=0 gox -verbose -ldflags="$(govvv -flags)" -ldflags="-s -w" -os="linux darwin windows" -arch="amd64 386 armv5 armv6 armv7 arm64" -osarch="!darwin/arm64 linux/ppc64 linux/ppc64le" -tags tool -ldflags "-extldflags \"-static\"" -output="dist/rai-srcmanager-{{.OS}}-{{.Arch}}/{{.Dir}}" .
+  - CGO_ENABLED=0 gox -verbose -ldflags="$(govvv -flags)" -ldflags="-s -w" -os="linux darwin windows" -arch="amd64 386 armv5 armv6 armv7 arm64" -osarch="!darwin/arm64 linux/ppc64 linux/ppc64le" -ldflags "-extldflags \"-static\"" -output="dist/rai-srcmanager-{{.OS}}-{{.Arch}}/{{.Dir}}" .
 before_deploy:
   - ls -l dist
 deploy:
