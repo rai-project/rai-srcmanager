@@ -1,21 +1,22 @@
 language: go
 go:
-- '1.8'
+  - '1.8'
 sudo: true
 before_install:
-- sudo add-apt-repository ppa:masterminds/glide -y
-- sudo apt-get update -q
-- sudo apt-get install glide -y
+  - sudo add-apt-repository ppa:masterminds/glide -y
+  - sudo apt-get update -q
+  - sudo apt-get install glide -y
 install:
-- glide install
-- go get github.com/mjibson/esc
-- go get github.com/ahmetb/govvv
-- cd pkg && go generate && cd -
+  - glide install
+  - go get github.com/mjibson/esc
+  - go get github.com/ahmetb/govvv
+  - cd pkg && go generate && cd -
 script:
-- go test -v $(glide novendor)
-- go build
+  - go test -v $(glide novendor)
+  - go build
 before_deploy:
-- echo "this is a placeholder"
+  - echo "this is a placeholder"
+  - ls -l
 deploy:
   provider: s3
   access_key_id: AKIAJKYNV36UTYQRGJUA
@@ -23,6 +24,7 @@ deploy:
     secure: hMt5VNvh6+x6sxX5T2uyUk70SZBeb0cLvWFQjfkr+226NNeGQ86QWygn6JDgnmJpnPOnE5gX1OMMjHglOxcAujUjqMErGFotKGi7uoR3SWA3efN6771tyAyOMWWQyajwhKslU6YyZxrTfNRBmy9w7f5Wc2266syVUu7CfdAL4vTHm+uwzs9x599LTth434Ck/7CDqoEfhbj7+5NWVQ2XGf3CPwgNT72SYVnzi39k5qOPqw3lm+ebFq4Kp+aBd7iOJzyo7j10NsG+VyNnLpcpfuajaOmAaFmuep+USOApUI8ebjDzqQ5nKh4pVJvZxgFIWeyIENlODZmnVf8/lHF8xdC9woO+Dsd8QYqL32oQ6YB2GENIZwT6uLZBuCS4bwXBcz0DzNYeJDcz6EdydfautckmHUlS2LKp6CIuDPyB1aPXlk+LQvCDLzOqz9qIDZgJeJir/5kSkfjxK9JfOWbrA/zDdgmVgG4rMP6FbZlCK9DTWM0k3LctPhncY2s7CQHR9RafoO9Fa2nGGAW5HRk9ERnFH41HwqoFAiNLeq8DVcnWWG5sIDeUde3y/V++w5ESc/jXfP6Zf4INWnVn6/60pmQ9i99ybR19KkePsJzpqtno1ZrhmCDZh2g6sboeFoCuxDr44F1ZUBuaJrn0XTvXlGGHgakmH1b0TyECjUGuSco=
   bucket: files.rai-project.com
   upload-dir: dist
+  local_dir: build
   skip_cleanup: true
   acl: public_read
   on:
