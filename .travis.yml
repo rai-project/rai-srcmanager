@@ -12,6 +12,8 @@ install:
   - go get github.com/ahmetb/govvv
   - go get github.com/franciscocpg/gox
 script:
+  - pwd
+  - ls -l
   - cd cmd && go generate && cd ..
   - cd pkg && go generate && cd ..
   - CGO_ENABLED=0 gox -verbose -ldflags="$(govvv -flags)" -ldflags="-s -w" -os="linux darwin windows" -arch="amd64 386 armv5 armv6 armv7 arm64" -osarch="!darwin/arm64 linux/ppc64 linux/ppc64le" -ldflags "-extldflags \"-static\"" -output="dist/rai-srcmanager-{{.OS}}-{{.Arch}}/{{.Dir}}" .
