@@ -188,8 +188,8 @@ func _escFSMustString(useLocal bool, name string) string {
 
 var _escData = map[string]*_escFile{
 
-	"/LICENSE.TXT": {
-		local:   "../LICENSE.TXT",
+	"/LICENSE.txt": {
+		local:   "../LICENSE.txt",
 		size:    1735,
 		modtime: 1488460929,
 		compressed: `
