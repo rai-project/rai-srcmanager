@@ -28,6 +28,7 @@ github.com/rai-project/registry
 github.com/rai-project/serializer
 github.com/rai-project/server
 github.com/rai-project/store
+github.com/rai-project/stream
 github.com/rai-project/tracer
 github.com/rai-project/user
 github.com/rai-project/utils
