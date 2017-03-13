@@ -13,3 +13,5 @@ import:
   version: ~0.3.2
 - package: github.com/k0kubun/pp
   version: ~2.3.0
+- package: github.com/spf13/pflag
+  version: master

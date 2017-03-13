@@ -188,10 +188,10 @@ func _escFSMustString(useLocal bool, name string) string {
 
 var _escData = map[string]*_escFile{
 
-	"/LICENSE.txt": {
-		local:   "../LICENSE.txt",
-		size:    1735,
-		modtime: 1488765396,
+	"/LICENSE.TXT": {
+		local:   "../LICENSE.TXT",
+		size:    1736,
+		modtime: 1489375748,
 		compressed: `
 H4sIAAAAAAAA/7RUy27juBJdX37FQVbdgK7nsRmgd4pFx8TYlCHRncmSlsoRJ5IokFQC//2AVOJ2T9aT
 TYBSnTqPKnptp4szz13Al+Yrfv/1tz8y5Kd27lHolxf9grzvkRo8HHlyr9SuGCvolXo7UYvT5Rv+d4tg
@@ -208,7 +208,7 @@ CSg3LJdPwJ9CFhn4X4eK1zVQVunnayd4kUHI9e5YCPkA3B8VZKmAndgLxQumSiCxf8wUPMI3wJ5X620u
 VX4vdkI9ZcBGKJmmYxPn5+yQV0qsj7u8wuFYHcqaA7ksIEsp5KYS8oHvuVQrQEjIEuDfuVSot/lut3he
 l1JV4v6oyqpOotfl4akSD1sFbMtdwasa9zzKze93/J1XPrH1Lhf7DEW+zx/4gizVllep8V3v45ankpAR
 g3ytRCljYIk0X6sMUGWlfqAfRc0z5JWoU1ibqtxnSIGXmyVSGcGSL6PiOpb0rquLTbFwrPmNqILnOyEf
-apYQt4DVPwEAAP//Zk2Gj8cGAAA=
+apYQt4AV+ycAAP//s0SJlsgGAAA=
 `,
 	},
 
