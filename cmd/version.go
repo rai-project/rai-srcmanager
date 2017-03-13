@@ -6,6 +6,7 @@ import (
 )
 
 type Version struct {
+	Version    string
 	BuildDate  string
 	GitCommit  string
 	GitBranch  string
