@@ -191,7 +191,7 @@ var _escData = map[string]*_escFile{
 	"/LICENSE.TXT": {
 		local:   "../LICENSE.TXT",
 		size:    1736,
-		modtime: 1489375748,
+		modtime: 1489873196,
 		compressed: `
 H4sIAAAAAAAA/7RUy27juBJdX37FQVbdgK7nsRmgd4pFx8TYlCHRncmSlsoRJ5IokFQC//2AVOJ2T9aT
 TYBSnTqPKnptp4szz13Al+Yrfv/1tz8y5Kd27lHolxf9grzvkRo8HHlyr9SuGCvolXo7UYvT5Rv+d4tg
