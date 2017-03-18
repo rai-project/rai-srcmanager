@@ -119,8 +119,8 @@ func Update() error {
 					return
 				}
 			}
-			cmd := exec.Command("go", "generate", targetDir)
-			cmd.CombinedOutput()
+			//cmd := exec.Command("go", "generate", targetDir)
+			//cmd.CombinedOutput()
 		}(rawURL)
 	}
 	wg.Wait()

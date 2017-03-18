@@ -13,7 +13,6 @@ import (
 	"time"
 
 	log "github.com/Sirupsen/logrus"
-	glob "github.com/mattn/go-zglob"
 )
 
 type GitRepo struct {
@@ -229,13 +228,15 @@ func (s *GitRepo) Update() error {
 	if err != nil {
 		return NewRemoteError("Unable to update repository", err, string(out))
 	}
-	files, err := glob.Glob(filepath.Join(s.LocalPath(), "*.go"))
-	if err == nil && len(files) > 0 {
-		out, err = s.RunFromDir("go", "generate", ".")
-		if err != nil {
-			return NewRemoteError("Unable to perform a go generate on repository repository", err, string(out))
+	/*
+		files, err := glob.Glob(filepath.Join(s.LocalPath(), "*.go"))
+		if err == nil && len(files) > 0 {
+			out, err = s.RunFromDir("go", "generate", ".")
+			if err != nil {
+				return NewRemoteError("Unable to perform a go generate on repository repository", err, string(out))
+			}
 		}
-	}
+	*/
 	s.Logger.Info("Updated " + s.LocalPath())
 	return nil
 }
