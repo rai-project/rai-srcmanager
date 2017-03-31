@@ -20,6 +20,7 @@ github.com/rai-project/metrics
 github.com/rai-project/model
 github.com/rai-project/nvidia-smi
 github.com/rai-project/nvidia_exporter
+github.com/rai-project/plini
 github.com/rai-project/profile
 github.com/rai-project/pubsub
 github.com/rai-project/rai
