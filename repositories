@@ -9,6 +9,7 @@ github.com/rai-project/context
 github.com/rai-project/cudainfo
 github.com/rai-project/database
 github.com/rai-project/docker
+github.com/rai-project/Dockerfiles
 github.com/rai-project/email
 github.com/rai-project/goconf
 github.com/rai-project/godotenv
@@ -29,6 +30,7 @@ github.com/rai-project/rai-docker-volume
 github.com/rai-project/raid
 github.com/rai-project/ratelimit
 github.com/rai-project/registry
+github.com/rai-project/scratch
 github.com/rai-project/serializer
 github.com/rai-project/server
 github.com/rai-project/store
