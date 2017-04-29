@@ -15,13 +15,14 @@ github.com/rai-project/email
 github.com/rai-project/goconf
 github.com/rai-project/godotenv
 github.com/rai-project/googlecloud
+github.com/rai-project/grpc
 github.com/rai-project/health
 github.com/rai-project/inle
 github.com/rai-project/ldcache
 github.com/rai-project/logger
 github.com/rai-project/metrics
-github.com/rai-project/middleware
 github.com/rai-project/model
+github.com/rai-project/monitoring
 github.com/rai-project/nvidia_exporter
 github.com/rai-project/nvidia-smi
 github.com/rai-project/plini
