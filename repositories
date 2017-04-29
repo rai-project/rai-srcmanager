@@ -9,6 +9,7 @@ github.com/rai-project/context
 github.com/rai-project/cudainfo
 github.com/rai-project/database
 github.com/rai-project/docker
+github.com/rai-project/dockerfile-builder
 github.com/rai-project/Dockerfiles
 github.com/rai-project/email
 github.com/rai-project/goconf
@@ -19,17 +20,19 @@ github.com/rai-project/inle
 github.com/rai-project/ldcache
 github.com/rai-project/logger
 github.com/rai-project/metrics
+github.com/rai-project/middleware
 github.com/rai-project/model
-github.com/rai-project/nvidia-smi
 github.com/rai-project/nvidia_exporter
+github.com/rai-project/nvidia-smi
 github.com/rai-project/plini
 github.com/rai-project/profile
 github.com/rai-project/pubsub
 github.com/rai-project/rai
-github.com/rai-project/rai-keygen
 github.com/rai-project/rai-docker-volume
+github.com/rai-project/rai-keygen
 github.com/rai-project/raid
 github.com/rai-project/ratelimit
+github.com/rai-project/react-components
 github.com/rai-project/registry
 github.com/rai-project/scratch
 github.com/rai-project/serializer
@@ -41,4 +44,5 @@ github.com/rai-project/tracer
 github.com/rai-project/utils
 github.com/rai-project/uuid
 github.com/rai-project/vipertags
+github.com/rai-project/web
 github.com/rai-project/xj2s
