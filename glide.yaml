@@ -1,17 +1,12 @@
 package: github.com/rai-project/rai-srcmanager
 import:
-- package: github.com/sirupsen/logrus
-  version: ^1.0.0
 - package: github.com/Unknwon/com
-  version: ^1.0.0
+  version: ~1.0.0
+- package: github.com/k0kubun/pp
+  version: ~2.3.0
 - package: github.com/mattn/go-zglob
 - package: github.com/pkg/errors
   version: ~0.8.0
+- package: github.com/sirupsen/logrus
+  version: ~1.0.0
 - package: github.com/spf13/cobra
-  version: master
-- package: github.com/x-cray/logrus-prefixed-formatter
-  version: ~0.3.2
-- package: github.com/k0kubun/pp
-  version: ~2.3.0
-- package: github.com/spf13/pflag
-  version: master
