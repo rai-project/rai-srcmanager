@@ -4,10 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	log "github.com/sirupsen/logrus"
 	srcmanager "github.com/rai-project/rai-srcmanager/pkg"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	prefixed "github.com/x-cray/logrus-prefixed-formatter"
 )
 
 var (
@@ -29,7 +28,7 @@ func Execute(v Version) {
 	} else {
 		log.SetLevel(log.InfoLevel)
 	}
-	log.SetFormatter(new(prefixed.TextFormatter))
+	log.SetFormatter(new(log.TextFormatter))
 	srcmanager.Logger = log.StandardLogger()
 	srcmanager.Verbose = Verbose
 	if err := RootCmd.Execute(); err != nil {
