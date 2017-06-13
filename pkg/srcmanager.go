@@ -10,7 +10,7 @@ import (
 	"strings"
 	"sync"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/Unknwon/com"
 	glob "github.com/mattn/go-zglob"
 )

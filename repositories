@@ -19,6 +19,7 @@ github.com/rai-project/godotenv
 github.com/rai-project/googlecloud
 github.com/rai-project/grpc
 github.com/rai-project/health
+github.com/rai-project/image
 github.com/rai-project/inle
 github.com/rai-project/ldcache
 github.com/rai-project/logger

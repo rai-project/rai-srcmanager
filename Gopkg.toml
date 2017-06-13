@@ -53,7 +53,7 @@
 
 [[dependencies]]
   branch = "master"
-  name = "github.com/Sirupsen/logrus"
+  name = "github.com/sirupsen/logrus"
 
 [[dependencies]]
   branch = "master"
