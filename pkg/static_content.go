@@ -189,16 +189,16 @@ func _escFSMustString(useLocal bool, name string) string {
 var _escData = map[string]*_escFile{
 
 	"/repositories": {
-		local:   "../repositories",
-		size:    1625,
-		modtime: 1497359236,
+		local:   "repositories",
+		size:    1658,
+		modtime: 1497423788,
 		compressed: `
-H4sIAAAAAAAA/3yUUa6cMAxF/7sX+qSuofuojGOC3zgxchxmpquv0Ej9u/xFOsaG40uq5j7Xn+ztK0iX
-I/xbOL8oeNdTfiA8c4fsORBawx8SiDJFMwhNpSekrUDkfdN6Q1NeuO8spH1zxAslrTSgp+J888HFtqAm
-T4/HfYNNTZZ1qhXc7Pf/SqhfGikUXP0yhWnxlH5i7tWEzSdcRI2DEduFDCdKG1WoWLtBZoWJd4y9Viy0
-SYYylNm8CJTZvGt6aIfB66cWpT/yOjwSv8SnbBlNUcVh2jEMvxIB8VzHXBENgn2v8yeay+k2G5xwnR/y
-rtJvKmBkglJMm8L/M4Q4F/Z2eJeecFkhVUfGG/HBQckwgENCyfQv3tOQOG9oekBFI0OoQfoeKc2c4RWR
-QYxHz1SDWubE7k89JJIqfPgpMDmv71/jXwAAAP//Sc4GPVkGAAA=
+H4sIAAAAAAAA/3yUUc6cMAyE33sX+ks9Q+9RGccE/+vEyHHY3Z6+Qiv1bXiL9DkemBmomvtcf7K3ryBd
+jvBv4fyi4F1P+YHwzB2y50BoDX9IIMoUzSA0lZ6QtgKR903rDU154b2zkPbNES+UtNKAPhXnmxcudt0f
+AuWLbUFNnh6Pe4VNTZZ1qhWs9vv/JMxHGilMoPplJabFU/qJuVcTNp8wqRoHI7YLGa6cNqowA+0GmRUm
+3jH2WrGhTTKUoZnNi0Azm3dND+2wmf3UovRHXodH4of4jC2jKZo4TDuG4VcjIJ7rmCuiQXDvdf5Ucznd
+ZoMK1/kh7yr9ZgJWJijFtCn8gkKIc2Fvh3fpCcMKqToy3ogPDkqGBRwSSqZ/cU5D4ryh6QEtGhlCDdL3
+SGnmDH8RGcRYeqYatGVO7P2ph0RShZefApvz+v41/gUAAP//pynYknoGAAA=
 `,
 	},
 
