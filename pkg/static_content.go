@@ -190,15 +190,15 @@ var _escData = map[string]*_escFile{
 
 	"/repositories": {
 		local:   "repositories",
-		size:    1658,
-		modtime: 1497423788,
+		size:    1687,
+		modtime: 1497607068,
 		compressed: `
-H4sIAAAAAAAA/3yUUc6cMAyE33sX+ks9Q+9RGccE/+vEyHHY3Z6+Qiv1bXiL9DkemBmomvtcf7K3ryBd
-jvBv4fyi4F1P+YHwzB2y50BoDX9IIMoUzSA0lZ6QtgKR903rDU154b2zkPbNES+UtNKAPhXnmxcudt0f
-AuWLbUFNnh6Pe4VNTZZ1qhWs9vv/JMxHGilMoPplJabFU/qJuVcTNp8wqRoHI7YLGa6cNqowA+0GmRUm
-3jH2WrGhTTKUoZnNi0Azm3dND+2wmf3UovRHXodH4of4jC2jKZo4TDuG4VcjIJ7rmCuiQXDvdf5Ucznd
-ZoMK1/kh7yr9ZgJWJijFtCn8gkKIc2Fvh3fpCcMKqToy3ogPDkqGBRwSSqZ/cU5D4ryh6QEtGhlCDdL3
-SGnmDH8RGcRYeqYatGVO7P2ph0RShZefApvz+v41/gUAAP//pynYknoGAAA=
+H4sIAAAAAAAA/3yUUc6cMAyE33sX+ks9Q+9RGccb/OPEyHHY3Z6+Qiv1bXiL9NkZmBmomttcf7K3ryBd
+jvBv4fyi4E1P+YHwzA2y50BoDd8lEGWKZhCaSk9IW4HI+0PrDU154XtnIe0PR7xQ0koD+lScb1642LU/
+BMoXewQ1eXrs9woPNVnWqVaw2u//kzAfaaQwgeqXlZgWT+kn5l5N2HzCpGocjNgmZLhy2qjCDLQbZFaY
+eMPYa8WGNslQhmY2LwLNbN41PbTDZvZTi9IfeR0eiR/iM7aMpmjiMO0Yhl+NgHiuY66IBsF7r/Onmsvp
+NhtUuM67vKv0mwlYmaAU06bwCwohzoW9Hd6lJwwrpOrIeCM+OCgZFnBIKJn+xTkNifOGpge0aGQINUjf
+I6WZM/xFZBBj6Zlq0JY5sfenHhJJFS4/BTbn9f0Lrpmu+/kvAAD//7drUlCXBgAA
 `,
 	},
 
