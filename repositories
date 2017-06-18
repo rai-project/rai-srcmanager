@@ -1,4 +1,3 @@
-github.com/rai-project/Dockerfiles
 github.com/rai-project/archive
 github.com/rai-project/auth
 github.com/rai-project/aws
@@ -14,6 +13,8 @@ github.com/rai-project/dldataset
 github.com/rai-project/dlframework
 github.com/rai-project/docker
 github.com/rai-project/dockerfile-builder
+github.com/rai-project/Dockerfiles
+github.com/rai-project/downloadmanager
 github.com/rai-project/email
 github.com/rai-project/goconf
 github.com/rai-project/godotenv
@@ -28,8 +29,8 @@ github.com/rai-project/logger
 github.com/rai-project/metrics
 github.com/rai-project/model
 github.com/rai-project/monitoring
-github.com/rai-project/nvidia-smi
 github.com/rai-project/nvidia_exporter
+github.com/rai-project/nvidia-smi
 github.com/rai-project/plini
 github.com/rai-project/profile
 github.com/rai-project/pubsub
