@@ -29,6 +29,7 @@ github.com/rai-project/logger
 github.com/rai-project/metrics
 github.com/rai-project/model
 github.com/rai-project/monitoring
+github.com/rai-project/node_exporter
 github.com/rai-project/nvidia_exporter
 github.com/rai-project/nvidia-smi
 github.com/rai-project/plini
