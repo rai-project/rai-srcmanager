@@ -25,6 +25,7 @@ github.com/rai-project/image
 github.com/rai-project/inle
 github.com/rai-project/ldcache
 github.com/rai-project/libkv
+github.com/rai-project/lock
 github.com/rai-project/logger
 github.com/rai-project/metrics
 github.com/rai-project/model
