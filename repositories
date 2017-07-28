@@ -2,6 +2,8 @@ github.com/rai-project/archive
 github.com/rai-project/auth
 github.com/rai-project/aws
 github.com/rai-project/broker
+github.com/rai-project/caffe
+github.com/rai-project/caffe2
 github.com/rai-project/carml
 github.com/rai-project/client
 github.com/rai-project/cmd
@@ -30,6 +32,7 @@ github.com/rai-project/logger
 github.com/rai-project/metrics
 github.com/rai-project/model
 github.com/rai-project/monitoring
+github.com/rai-project/mxnet
 github.com/rai-project/node_exporter
 github.com/rai-project/nvidia_exporter
 github.com/rai-project/nvidia-smi
@@ -50,6 +53,7 @@ github.com/rai-project/service
 github.com/rai-project/store
 github.com/rai-project/stream
 github.com/rai-project/systemlock
+github.com/rai-project/tensorflow
 github.com/rai-project/tracer
 github.com/rai-project/utils
 github.com/rai-project/uuid
