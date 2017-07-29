@@ -36,6 +36,7 @@ github.com/rai-project/mxnet
 github.com/rai-project/node_exporter
 github.com/rai-project/nvidia_exporter
 github.com/rai-project/nvidia-smi
+github.com/rai-project/parallel
 github.com/rai-project/plini
 github.com/rai-project/profile
 github.com/rai-project/pubsub
@@ -54,6 +55,7 @@ github.com/rai-project/store
 github.com/rai-project/stream
 github.com/rai-project/systemlock
 github.com/rai-project/tensorflow
+github.com/rai-project/torch
 github.com/rai-project/tracer
 github.com/rai-project/utils
 github.com/rai-project/uuid
