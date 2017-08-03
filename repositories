@@ -20,6 +20,8 @@ github.com/rai-project/dockerfile-builder
 github.com/rai-project/Dockerfiles
 github.com/rai-project/downloadmanager
 github.com/rai-project/email
+github.com/rai-project/go-caffe
+github.com/rai-project/go-caffe2
 github.com/rai-project/goconf
 github.com/rai-project/godotenv
 github.com/rai-project/googlecloud
@@ -59,10 +61,10 @@ github.com/rai-project/stream
 github.com/rai-project/systemlock
 github.com/rai-project/tensorflow
 github.com/rai-project/torch
+github.com/rai-project/tracepp
 github.com/rai-project/tracer
 github.com/rai-project/utils
 github.com/rai-project/uuid
 github.com/rai-project/vipertags
 github.com/rai-project/web
 github.com/rai-project/xj2s
-github.com/rai-project/tracepp
