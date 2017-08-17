@@ -22,6 +22,7 @@ github.com/rai-project/downloadmanager
 github.com/rai-project/email
 github.com/rai-project/go-caffe
 github.com/rai-project/go-caffe2
+github.com/rai-project/go-mxnet-predictor
 github.com/rai-project/goconf
 github.com/rai-project/godotenv
 github.com/rai-project/googlecloud
