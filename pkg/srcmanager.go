@@ -10,9 +10,9 @@ import (
 	"strings"
 	"sync"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/Unknwon/com"
 	glob "github.com/mattn/go-zglob"
+	log "github.com/sirupsen/logrus"
 )
 
 var (
@@ -271,6 +271,72 @@ func GoGet() error {
 	wg.Wait() // Dont return until all repos have been examined, and all messages have been printed
 	close(importChan)
 	<-done
+	return nil
+}
+
+func BumpVersion() error {
+	rawURLs, err := RepositoryURLs()
+	if err != nil {
+		return err
+	}
+	var wg sync.WaitGroup
+	wg.Add(len(rawURLs))
+	for _, rawURL := range rawURLs {
+		go func(rawURL string) {
+			defer wg.Done()
+			targetDir, err := getSrcPath(rawURL)
+			if err != nil {
+				log.WithError(err).Error("Cannot get source path for " + rawURL)
+				return
+			}
+			cfg := filepath.Join(targetDir, ".bumpversion.cfg")
+			if !com.IsExist(cfg) {
+				// log.Info(".bumpversion.cfg does not exist for " + rawURL)
+				return
+			}
+
+			// bumpversion patch --commit && git push && git push --tags
+			args := []string{
+				"patch",
+				"--commit",
+			}
+			cmd := exec.Command("bumpversion", args...)
+			cmd.Dir = targetDir
+			buf, err := cmd.CombinedOutput()
+			if err != nil {
+				log.WithError(err).Error("Failed to run bumpversion " + strings.Join(args, " ") + " in " + targetDir)
+				return
+			}
+			log.Debugf(string(buf))
+
+			args = []string{
+				"push",
+			}
+			cmd = exec.Command("git", args...)
+			cmd.Dir = targetDir
+			buf, err = cmd.CombinedOutput()
+			if err != nil {
+				log.WithError(err).Error("Failed to run git " + strings.Join(args, " ") + " in " + targetDir)
+				return
+			}
+			log.Debugf(string(buf))
+
+			args = []string{
+				"push",
+				"--tags",
+			}
+			cmd = exec.Command("git", args...)
+			cmd.Dir = targetDir
+			buf, err = cmd.CombinedOutput()
+			if err != nil {
+				log.WithError(err).Error("Failed to run git " + strings.Join(args, " ") + " in " + targetDir)
+				return
+			}
+			log.Debugf(string(buf))
+
+		}(rawURL)
+	}
+	wg.Wait()
 	return nil
 }
 
