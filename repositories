@@ -74,3 +74,5 @@ github.com/rai-project/xj2s
 github.com/rai-project/go-libjpeg
 github.com/rai-project/pipeline
 github.com/rai-project/evaluation
+github.com/rai-project/go-papi
+github.com/rai-project/performance
