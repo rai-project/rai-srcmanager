@@ -77,3 +77,6 @@ github.com/rai-project/evaluation
 github.com/rai-project/go-papi
 github.com/rai-project/performance
 github.com/rai-project/ctimer
+github.com/rai-project/cpu
+github.com/rai-project/machine
+github.com/rai-project/gpu
