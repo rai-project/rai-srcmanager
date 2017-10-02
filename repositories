@@ -74,7 +74,7 @@ github.com/rai-project/stream
 github.com/rai-project/systemlock
 github.com/rai-project/tensorflow
 github.com/rai-project/torch7
-github.com/rai-project/tracepp
+#github.com/rai-project/tracepp
 github.com/rai-project/tracer
 github.com/rai-project/utils
 github.com/rai-project/uuid
