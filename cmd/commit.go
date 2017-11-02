@@ -19,7 +19,7 @@ var commitCmd = &cobra.Command{
 			log.Fatal("Aborting commit due to empty commit message")
 			return
 		}
-		srcmanager.Commit(args[0])
+		srcmanager.Commit(isPublic, args[0])
 	},
 }
 
@@ -27,5 +27,6 @@ func init() {
 	commitCmd.PersistentFlags().StringVarP(&ignoredCommitFlags, "add", "a", "", "add all this is the default and cannot be overridden")
 	commitCmd.PersistentFlags().StringVarP(&ignoredCommitFlags, "message", "m", "", "message this is the default and cannot be overridden")
 	commitCmd.PersistentFlags().StringVar(&ignoredCommitFlags, "am", "", "add all with message this is the default and cannot be overridden")
+	commitCmd.PersistentFlags().BoolVar(&isPublic, "public", false, "use public repositories")
 	RootCmd.AddCommand(commitCmd)
 }

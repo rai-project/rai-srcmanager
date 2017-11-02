@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	log "github.com/sirupsen/logrus"
 	srcmanager "github.com/rai-project/rai-srcmanager/pkg"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
 
@@ -15,10 +15,11 @@ var dirtyCmd = &cobra.Command{
 		if len(args) != 0 {
 			log.Warning("Ignoring args after 'status'")
 		}
-		srcmanager.Dirty()
+		srcmanager.Dirty(isPublic)
 	},
 }
 
 func init() {
+	dirtyCmd.PersistentFlags().BoolVar(&isPublic, "public", false, "use public repositories")
 	RootCmd.AddCommand(dirtyCmd)
 }

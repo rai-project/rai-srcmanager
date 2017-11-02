@@ -38,11 +38,14 @@ func RepositoryURLs() ([]string, error) {
 
 var re = regexp.MustCompile("^github.com/(.+)$")
 
-func githubURL(url string) string {
+func githubURL(isPublic bool, url string) string {
+	if isPublic {
+		return re.ReplaceAllString(url, "https://github.com/${1}.git")
+	}
 	return re.ReplaceAllString(url, "git@github.com:${1}.git")
 }
 
-func Commit(message string) error {
+func Commit(isPublic bool, message string) error {
 	rawURLs, err := RepositoryURLs()
 	if err != nil {
 		return err
@@ -53,7 +56,7 @@ func Commit(message string) error {
 		go func(rawURL string) {
 			defer wg.Done()
 			// defer log.Debug("Processed " + rawURL)
-			cloneURL := githubURL(rawURL)
+			cloneURL := githubURL(isPublic, rawURL)
 			targetDir, err := getSrcPath(rawURL)
 			if err != nil {
 				log.WithError(err).Error("Cannot get source path for " + rawURL)
@@ -85,7 +88,7 @@ func Commit(message string) error {
 	return nil
 }
 
-func Update() error {
+func Update(isPublic bool) error {
 	rawURLs, err := RepositoryURLs()
 	if err != nil {
 		return err
@@ -96,7 +99,7 @@ func Update() error {
 		go func(rawURL string) {
 			defer wg.Done()
 			// defer log.Debug("Processed " + rawURL)
-			cloneURL := githubURL(rawURL)
+			cloneURL := githubURL(isPublic, rawURL)
 			targetDir, err := getSrcPath(rawURL)
 			if err != nil {
 				log.WithError(err).Error("Cannot get source path for " + rawURL)
@@ -127,7 +130,7 @@ func Update() error {
 	return nil
 }
 
-func Dirty() error {
+func Dirty(isPublic bool) error {
 	rawURLs, err := RepositoryURLs()
 	if err != nil {
 		return err
@@ -139,7 +142,7 @@ func Dirty() error {
 		go func(rawURL string) {
 			defer wg.Done()
 
-			cloneURL := githubURL(rawURL)
+			cloneURL := githubURL(isPublic, rawURL)
 			targetDir, err := getSrcPath(rawURL)
 			if err != nil {
 				log.WithError(err).Error("Cannot get source path for " + rawURL)

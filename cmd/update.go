@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	log "github.com/sirupsen/logrus"
 	srcmanager "github.com/rai-project/rai-srcmanager/pkg"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
 
@@ -11,7 +11,7 @@ var updateCmd = &cobra.Command{
 	Use:   "update",
 	Short: "Pull or clone rai repositories",
 	Run: func(cmd *cobra.Command, args []string) {
-		err := srcmanager.Update()
+		err := srcmanager.Update(isPublic)
 		if err != nil {
 			log.WithError(err).Fatal("Cannot update repositories")
 		}
@@ -19,5 +19,6 @@ var updateCmd = &cobra.Command{
 }
 
 func init() {
+	updateCmd.PersistentFlags().BoolVar(&isPublic, "public", false, "use public repositories")
 	RootCmd.AddCommand(updateCmd)
 }

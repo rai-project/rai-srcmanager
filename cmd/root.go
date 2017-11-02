@@ -10,8 +10,9 @@ import (
 )
 
 var (
-	Verbose bool
-	version Version
+	Verbose  bool
+	isPublic bool
+	version  Version
 	// RootCmd represents the base command when called without any subcommands
 	RootCmd = &cobra.Command{
 		Use:   "rai-srcmanager",
