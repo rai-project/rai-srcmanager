@@ -85,3 +85,5 @@ github.com/rai-project/xj2s
 github.com/rai-project/nvml-go
 github.com/rai-project/dllayer
 github.com/rai-project/microbench
+github.com/rai-project/go-tensorrt
+github.com/rai-project/tensorrt
