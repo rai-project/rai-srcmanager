@@ -1,3 +1,4 @@
+#github.com/rai-project/tracepp
 github.com/rai-project/archive
 github.com/rai-project/auth
 github.com/rai-project/aws
@@ -18,6 +19,7 @@ github.com/rai-project/cudainfo
 github.com/rai-project/database
 github.com/rai-project/dldataset
 github.com/rai-project/dlframework
+github.com/rai-project/dllayer
 github.com/rai-project/docker
 github.com/rai-project/dockerfile-builder
 github.com/rai-project/Dockerfiles
@@ -26,10 +28,13 @@ github.com/rai-project/email
 github.com/rai-project/evaluation
 github.com/rai-project/go-caffe
 github.com/rai-project/go-caffe2
+github.com/rai-project/go-cntk
 github.com/rai-project/go-cupti
 github.com/rai-project/go-libjpeg
 github.com/rai-project/go-mxnet-predictor
+github.com/rai-project/go-paddle
 github.com/rai-project/go-papi
+github.com/rai-project/go-tensorrt
 github.com/rai-project/goconf
 github.com/rai-project/godotenv
 github.com/rai-project/googlecloud
@@ -44,12 +49,15 @@ github.com/rai-project/lock
 github.com/rai-project/logger
 github.com/rai-project/machine
 github.com/rai-project/metrics
+github.com/rai-project/microbench
 github.com/rai-project/model
 github.com/rai-project/monitoring
 github.com/rai-project/mxnet
 github.com/rai-project/node_exporter
 github.com/rai-project/nvidia_exporter
 github.com/rai-project/nvidia-smi
+github.com/rai-project/nvml-go
+github.com/rai-project/paddle
 github.com/rai-project/parallel
 github.com/rai-project/performance
 github.com/rai-project/pipeline
@@ -73,8 +81,8 @@ github.com/rai-project/store
 github.com/rai-project/stream
 github.com/rai-project/systemlock
 github.com/rai-project/tensorflow
+github.com/rai-project/tensorrt
 github.com/rai-project/torch7
-#github.com/rai-project/tracepp
 github.com/rai-project/tracer
 github.com/rai-project/utils
 github.com/rai-project/uuid
@@ -82,8 +90,3 @@ github.com/rai-project/vipertags
 github.com/rai-project/viz
 github.com/rai-project/web
 github.com/rai-project/xj2s
-github.com/rai-project/nvml-go
-github.com/rai-project/dllayer
-github.com/rai-project/microbench
-github.com/rai-project/go-tensorrt
-github.com/rai-project/tensorrt
