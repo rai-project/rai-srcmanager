@@ -15,6 +15,7 @@ var commitCmd = &cobra.Command{
 	Use:     "commit [msg]",
 	Aliases: []string{"co"},
 	Short:   "Adds and records all the changes to the repository",
+	Args:    cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) == 0 {
 			log.Fatal("Aborting commit due to empty commit message")
