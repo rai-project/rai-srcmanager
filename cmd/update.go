@@ -8,8 +8,9 @@ import (
 
 // updateCmd represents the update command
 var updateCmd = &cobra.Command{
-	Use:   "update",
-	Short: "Pull or clone rai repositories",
+	Use:     "update",
+	Aliases: []string{"clone", "up"},
+	Short:   "Pull or clone rai repositories",
 	Run: func(cmd *cobra.Command, args []string) {
 		err := srcmanager.Update(isPublic)
 		if err != nil {
