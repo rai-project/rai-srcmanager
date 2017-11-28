@@ -12,8 +12,10 @@ var (
 
 // commitCmd represents the commit command
 var commitCmd = &cobra.Command{
-	Use:   "commit [msg]",
-	Short: "Adds and records all the changes to the repository",
+	Use:     "commit [msg]",
+	Aliases: []string{"co"},
+	Short:   "Adds and records all the changes to the repository",
+	Args:    cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) == 0 {
 			log.Fatal("Aborting commit due to empty commit message")
@@ -28,5 +30,10 @@ func init() {
 	commitCmd.PersistentFlags().StringVarP(&ignoredCommitFlags, "message", "m", "", "message this is the default and cannot be overridden")
 	commitCmd.PersistentFlags().StringVar(&ignoredCommitFlags, "am", "", "add all with message this is the default and cannot be overridden")
 	commitCmd.PersistentFlags().BoolVar(&isPublic, "public", false, "use public repositories")
+
+	RootCmd.PersistentFlags().MarkHidden("add")
+	RootCmd.PersistentFlags().MarkHidden("message")
+	RootCmd.PersistentFlags().MarkHidden("am")
+
 	RootCmd.AddCommand(commitCmd)
 }
