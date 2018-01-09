@@ -11,7 +11,7 @@ git_repository(
 git_repository(
     name = "bazel_gazelle",
     commit = "9e43c85089c3247fece397f95dabc1cb63096a59", # master on 2018-01-09
-    remote = "https://github.com/bazelbuild/bazel_gazelle",
+    remote = "https://github.com/bazelbuild/bazel-gazelle",
 )
 
 load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_toolchains", "go_repository")
