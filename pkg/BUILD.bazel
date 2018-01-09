@@ -1,7 +1,9 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_embed_data")
-load("//:esc.bzl", "bindata")
+# gazelle:exclude static_content.go
 
-bindata(
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_embed_data")
+load("//:esc.bzl", "esc")
+
+esc(
     name = "static_content",
     srcs = ["//:repositories"],
     package = "srcmanager",
@@ -11,7 +13,6 @@ go_library(
     name = "go_default_library",
     srcs = [
         "srcmanager.go",
-        "static_content.go",
         "vcs.go",
         "vcserrors.go",
         ":static_content",  # keep

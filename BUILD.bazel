@@ -16,7 +16,10 @@ gazelle(
     prefix = "github.com/rai-project/rai-srcmanager",
 )
 
-exports_files(["LICENSE.TXT", "repositories"])
+exports_files([
+    "LICENSE.TXT",
+    "repositories",
+])
 
 go_library(
     name = "go_default_library",
@@ -27,7 +30,10 @@ go_library(
     ],
     importpath = "github.com/rai-project/rai-srcmanager",
     visibility = ["//visibility:public"],
-    deps = ["//cmd:go_default_library"],
+    deps = [
+        "//cmd:go_default_library",
+        "//vendor/github.com/mjibson/esc/embed:go_default_library",
+    ],
 )
 
 go_binary(

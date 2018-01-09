@@ -1,7 +1,9 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_embed_data")
-load("@io_bazel_rules_go//extras:bindata.bzl", "bindata")
+# gazelle:exclude static_content.go
 
-bindata(
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_embed_data")
+load("//:esc.bzl", "esc")
+
+esc(
     name = "static_content",
     srcs = ["//:LICENSE.TXT"],
     package = "cmd",
@@ -16,7 +18,6 @@ go_library(
         "goget.go",
         "license.go",
         "root.go",
-        "static_content.go",
         "update.go",
         "version.go",
         ":static_content",  # keep

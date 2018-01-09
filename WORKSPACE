@@ -22,14 +22,11 @@ http_archive(
 load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_toolchains", "go_repository")
 load("@io_bazel_rules_go//proto:def.bzl", "proto_register_toolchains")
 load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
+load("//:esc.bzl", "esc_repositories")
+
 
 
 go_rules_dependencies()
 go_register_toolchains()
 gazelle_dependencies()
-
-go_repository(
-    name = "com_github_mjibson_esc",
-    commit = "58d9cde84f237ecdd89bd7f61c2de2853f4c5c6e",
-    importpath = "github.com/mjibson/esc",
-)
+esc_repositories()

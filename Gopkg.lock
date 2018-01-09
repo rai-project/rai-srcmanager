@@ -42,10 +42,7 @@
 
 [[projects]]
   name = "github.com/mjibson/esc"
-  packages = [
-    ".",
-    "embed"
-  ]
+  packages = ["embed"]
   revision = "58d9cde84f237ecdd89bd7f61c2de2853f4c5c6e"
   version = "v0.1.0"
 
@@ -91,6 +88,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "d67d56dc1c29c07171c52fcb56053704140ee2f0fc8c73f90bf5a402f2785541"
+  inputs-digest = "6655c95efcc71121857151130e03a84478b3682e96c3ff56249984fc3eeab756"
   solver-name = "gps-cdcl"
   solver-version = 1
