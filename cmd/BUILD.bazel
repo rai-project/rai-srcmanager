@@ -1,7 +1,7 @@
 # gazelle:exclude static_content.go
 
 load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_embed_data")
-load("//:esc.bzl", "esc")
+load("@build_tools//:esc.bzl", "esc")
 
 esc(
     name = "static_content",
