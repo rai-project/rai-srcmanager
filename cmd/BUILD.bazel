@@ -1,0 +1,32 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_embed_data")
+load("@io_bazel_rules_go//extras:bindata.bzl", "bindata")
+
+bindata(
+    name = "static_content",
+    srcs = ["//:LICENSE.TXT"],
+    package = "cmd",
+)
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "bumpversion.go",
+        "commit.go",
+        "dirty.go",
+        "goget.go",
+        "license.go",
+        "root.go",
+        "static_content.go",
+        "update.go",
+        "version.go",
+        ":static_content",  # keep
+    ],
+    importpath = "github.com/rai-project/rai-srcmanager/cmd",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//pkg:go_default_library",
+        "//vendor/github.com/k0kubun/pp:go_default_library",
+        "//vendor/github.com/sirupsen/logrus:go_default_library",
+        "//vendor/github.com/spf13/cobra:go_default_library",
+    ],
+)

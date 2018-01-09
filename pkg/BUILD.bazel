@@ -1,0 +1,27 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_embed_data")
+load("//:esc.bzl", "bindata")
+
+bindata(
+    name = "static_content",
+    srcs = ["//:repositories"],
+    package = "srcmanager",
+)
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "srcmanager.go",
+        "static_content.go",
+        "vcs.go",
+        "vcserrors.go",
+        ":static_content",  # keep
+    ],
+    importpath = "github.com/rai-project/rai-srcmanager/pkg",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//vendor/github.com/Unknwon/com:go_default_library",
+        "//vendor/github.com/mattn/go-zglob:go_default_library",
+        "//vendor/github.com/pkg/errors:go_default_library",
+        "//vendor/github.com/sirupsen/logrus:go_default_library",
+    ],
+)

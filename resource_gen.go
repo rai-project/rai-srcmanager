@@ -2,3 +2,7 @@
 //go:generate esc -o pkg/static_content.go -pkg srcmanager -private repositories
 
 package main
+
+import (
+	_ "github.com/mjibson/esc/embed"
+)

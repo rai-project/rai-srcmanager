@@ -1,0 +1,38 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_embed_data", "go_prefix", "go_library")
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+go_prefix("github.com/rai-project/rai-srcmanager")
+
+gazelle(
+    name = "gazelle",
+    external = "vendored",
+    prefix = "github.com/rai-project/rai-srcmanager",
+)
+
+gazelle(
+    name = "gazelle_fix",
+    command = "fix",
+    external = "vendored",
+    prefix = "github.com/rai-project/rai-srcmanager",
+)
+
+exports_files(["LICENSE.TXT", "repositories"])
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "main.go",
+        "resource_gen.go",
+        "version.go",
+    ],
+    importpath = "github.com/rai-project/rai-srcmanager",
+    visibility = ["//visibility:public"],
+    deps = ["//cmd:go_default_library"],
+)
+
+go_binary(
+    name = "rai-srcmanager",
+    embed = [":go_default_library"],
+    importpath = "github.com/rai-project/rai-srcmanager",
+    visibility = ["//visibility:public"],
+)
