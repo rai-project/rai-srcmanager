@@ -10,7 +10,8 @@ var gogetCmd = &cobra.Command{
 	Use:   "goget",
 	Short: "Performs a glide install on all the packages that are needed by the repositories",
 	Run: func(cmd *cobra.Command, args []string) {
-		srcmanager.GoGet()
+		isPublic := false
+		srcmanager.GoGet(isPublic)
 	},
 }
 

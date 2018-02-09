@@ -49,3 +49,5 @@ debug
 /bazel-rai-srcmanager
 /bazel-testlogs
 /build/bin/
+
+rai-srcmanager

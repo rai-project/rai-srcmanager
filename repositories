@@ -32,7 +32,7 @@ github.com/rai-project/go-cntk
 github.com/rai-project/go-cupti
 github.com/rai-project/go-libjpeg
 github.com/rai-project/go-mxnet-predictor
-github.com/rai-project/go-paddle
+github.com/rai-project/go-paddle [private]
 github.com/rai-project/go-papi
 github.com/rai-project/go-tensorrt
 github.com/rai-project/goconf
@@ -69,9 +69,9 @@ github.com/rai-project/rai-docker-volume
 github.com/rai-project/rai-keygen
 github.com/rai-project/raid
 github.com/rai-project/ratelimit
-github.com/rai-project/react-components
+# github.com/rai-project/react-components
 github.com/rai-project/registry
-github.com/rai-project/release-tools
+# github.com/rai-project/release-tools
 github.com/rai-project/scratch
 github.com/rai-project/secret
 github.com/rai-project/serializer
@@ -82,12 +82,12 @@ github.com/rai-project/stream
 github.com/rai-project/systemlock
 github.com/rai-project/tensorflow
 github.com/rai-project/tensorrt
-github.com/rai-project/torch7
+github.com/rai-project/torch7 [private]
 github.com/rai-project/tracer
 github.com/rai-project/utils
 github.com/rai-project/uuid
 github.com/rai-project/vipertags
-github.com/rai-project/viz
+github.com/rai-project/viz [private]
 github.com/rai-project/web
 github.com/rai-project/xj2s
 github.com/rai-project/ml-arc-web

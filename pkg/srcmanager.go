@@ -21,12 +21,16 @@ var (
 	Verbose      = false
 )
 
-func RepositoryURLs() ([]string, error) {
+func RepositoryURLs(isPublic bool) ([]string, error) {
 	var repos []string
 	for _, repo := range strings.Split(strings.TrimSpace(string(repositories)), "\n") {
 		if strings.HasPrefix(repo, "#") || strings.TrimSpace(repo) == "" {
 			continue
 		}
+		if !isPublic && strings.Contains(repo, "[private]") {
+			continue
+		}
+		repo = strings.Replace(repo, "[private]", "", -1)
 		repos = append(repos, repo)
 	}
 	// probably not needed because of the TrimSpace
@@ -46,7 +50,7 @@ func githubURL(isPublic bool, url string) string {
 }
 
 func Commit(isPublic bool, message string) error {
-	rawURLs, err := RepositoryURLs()
+	rawURLs, err := RepositoryURLs(isPublic)
 	if err != nil {
 		return err
 	}
@@ -89,7 +93,7 @@ func Commit(isPublic bool, message string) error {
 }
 
 func Update(isPublic bool) error {
-	rawURLs, err := RepositoryURLs()
+	rawURLs, err := RepositoryURLs(isPublic)
 	if err != nil {
 		return err
 	}
@@ -131,7 +135,7 @@ func Update(isPublic bool) error {
 }
 
 func Dirty(isPublic bool) error {
-	rawURLs, err := RepositoryURLs()
+	rawURLs, err := RepositoryURLs(isPublic)
 	if err != nil {
 		return err
 	}
@@ -167,8 +171,8 @@ func Dirty(isPublic bool) error {
 	return nil
 }
 
-func GoGet() error {
-	rawURLs, err := RepositoryURLs()
+func GoGet(isPublic bool) error {
+	rawURLs, err := RepositoryURLs(isPublic)
 	if err != nil {
 		return err
 	}
@@ -277,8 +281,8 @@ func GoGet() error {
 	return nil
 }
 
-func BumpVersion() error {
-	rawURLs, err := RepositoryURLs()
+func BumpVersion(isPublic bool) error {
+	rawURLs, err := RepositoryURLs(isPublic)
 	if err != nil {
 		return err
 	}
