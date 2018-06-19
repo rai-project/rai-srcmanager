@@ -92,5 +92,6 @@ github.com/rai-project/web
 github.com/rai-project/xj2s
 github.com/rai-project/ml-arc-web
 github.com/rai-project/tegra
+github.com/rai-project/onnx
 github.com/rai-project/persistent [private]
 
