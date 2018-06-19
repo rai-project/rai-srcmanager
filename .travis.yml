@@ -1,6 +1,9 @@
 language: go
-go:
-- '1.8.x'
+  include:
+    - go: 1.10.x
+    - go: tip
+  allow_failures:
+    - go: tip
 dist: trusty
 sudo: false
 addons:
