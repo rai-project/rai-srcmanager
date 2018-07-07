@@ -94,5 +94,6 @@ github.com/rai-project/ml-arc-web
 github.com/rai-project/tegra
 github.com/rai-project/onnx
 github.com/rai-project/passlib
+github.com/rai-project/loadbalance
 github.com/rai-project/persistent [private]
 

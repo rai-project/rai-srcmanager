@@ -5,11 +5,10 @@ PROJECT := rai-srcmanager
 default: build
 
 dep:
-	dep ensure
-	bazel run //:gazelle_fix
+	dep ensure -v
 
 build:
-	bazel build ${PROJECT}
+	go build
 
 run:
 	bazel run ${PROJECT}
