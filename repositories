@@ -96,4 +96,6 @@ github.com/rai-project/onnx
 github.com/rai-project/passlib
 github.com/rai-project/loadbalance
 github.com/rai-project/persistent [private]
+github.com/rai-project/dlperf_website [private]
+github.com/rai-project/dlperf
 
