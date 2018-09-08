@@ -1,5 +1,5 @@
 
-# rai-srcmanager[![Build Status](https://travis-ci.org/rai-project/rai-srcmanager.svg?branch=master)](https://travis-ci.org/rai-project/rai-srcmanager)
+# rai-srcmanager [![Build Status](https://travis-ci.org/rai-project/rai-srcmanager.svg?branch=master)](https://travis-ci.org/rai-project/rai-srcmanager)
 
 ## What is this repository for?
 
@@ -56,7 +56,7 @@ To see what it can do for you. You'll probably want to run
     rai-srcmanager update
     rai-srcmanager goget
 
-to get started. By default `rai-srcmanager` checks out the repos using the `ssh` protocol. You can change that (checking out using the `https` protocol) by using `rai-srcmanager [[cmd]] --public` (for example `rai-srcmanager update --public`). You will run into `The Remote does not match the VCS endpoint` error if the repo checked out by `go get`.
+to get started. By default `rai-srcmanager` checks out the repos using the `ssh` protocol. You can change that (checking out using the `https` protocol) by using `rai-srcmanager [[cmd]] --public` (for example `rai-srcmanager update --public`). You will run into `The Remote does not match the VCS endpoint` error when you try to update if the repo was originally checked out by `go get` instead of `git clone`.
 
 
 ## Troubleshooting
