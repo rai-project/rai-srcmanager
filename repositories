@@ -92,10 +92,20 @@ github.com/rai-project/web
 github.com/rai-project/xj2s
 github.com/rai-project/ml-arc-web
 github.com/rai-project/tegra
+github.com/rai-project/nvprof
+github.com/rai-project/fpga
+github.com/rai-project/webpage
+github.com/rai-project/cuda_api_tracer
+github.com/rai-project/cgo
+github.com/rai-project/jemalloc
+github.com/rai-project/cudnn_tracer
+github.com/rai-project/go-pytorch
 github.com/rai-project/onnx
 github.com/rai-project/passlib
 github.com/rai-project/loadbalance
 github.com/rai-project/persistent [private]
+github.com/rai-project/tensorcore_bench [private]
+github.com/rai-project/tensorops [private]
 github.com/rai-project/dlperf_website [private]
 github.com/rai-project/dlperf
 
