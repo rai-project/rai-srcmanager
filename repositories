@@ -6,7 +6,7 @@ github.com/rai-project/broker
 github.com/rai-project/bumpversion
 github.com/rai-project/caffe
 github.com/rai-project/caffe2
-github.com/rai-project/carml
+github.com/rai-project/mlmodelscope
 github.com/rai-project/client
 github.com/rai-project/cmd
 github.com/rai-project/cntk
