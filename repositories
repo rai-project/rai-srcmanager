@@ -31,7 +31,7 @@ github.com/rai-project/go-caffe2
 github.com/rai-project/go-cntk
 github.com/rai-project/go-cupti
 github.com/rai-project/go-libjpeg
-github.com/rai-project/go-mxnet-predictor
+github.com/rai-project/go-mxnet
 github.com/rai-project/go-paddle [private]
 github.com/rai-project/go-papi
 github.com/rai-project/go-tensorrt
