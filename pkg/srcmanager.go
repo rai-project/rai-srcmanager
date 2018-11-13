@@ -110,7 +110,7 @@ func Update(isPublic bool) error {
 				return
 			}
 
-			if !com.IsDir(filepath.Join(targetDir, ".git")) {
+			if com.IsDir(targetDir) && !com.IsDir(filepath.Join(targetDir, ".git")) {
 				return
 			}
 
@@ -157,7 +157,7 @@ func Dirty(isPublic bool) error {
 				return
 			}
 
-			if !com.IsDir(filepath.Join(targetDir, ".git")) {
+			if com.IsDir(targetDir) && !com.IsDir(filepath.Join(targetDir, ".git")) {
 				return
 			}
 
