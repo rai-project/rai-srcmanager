@@ -112,3 +112,5 @@ github.com/rai-project/sys
 github.com/rai-project/acl
 github.com/rai-project/text
 github.com/rai-project/mock-predictor
+github.com/rai-project/batching
+github.com/rai-project/synthetic_load

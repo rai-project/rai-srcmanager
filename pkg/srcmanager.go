@@ -110,6 +110,10 @@ func Update(isPublic bool) error {
 				return
 			}
 
+			if !com.IsDir(filepath.Join(targetDir, ".git")) {
+				return
+			}
+
 			repo, err := NewGitRepo(cloneURL, targetDir)
 			if err != nil {
 				log.WithError(err).Error("Cannot get git repo which targets ", targetDir, " with "+cloneURL)
@@ -150,6 +154,10 @@ func Dirty(isPublic bool) error {
 			targetDir, err := getSrcPath(rawURL)
 			if err != nil {
 				log.WithError(err).Error("Cannot get source path for " + rawURL)
+				return
+			}
+
+			if !com.IsDir(filepath.Join(targetDir, ".git")) {
 				return
 			}
 
