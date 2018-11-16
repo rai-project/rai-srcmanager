@@ -49,7 +49,7 @@ github.com/rai-project/lock
 github.com/rai-project/logger
 github.com/rai-project/machine
 github.com/rai-project/metrics
-github.com/rai-project/microbench
+# github.com/rai-project/microbench
 github.com/rai-project/model
 github.com/rai-project/monitoring
 github.com/rai-project/mxnet
