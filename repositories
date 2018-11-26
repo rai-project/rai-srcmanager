@@ -48,7 +48,7 @@ github.com/rai-project/lock
 github.com/rai-project/logger
 github.com/rai-project/machine
 github.com/rai-project/metrics
-github.com/rai-project/microbench
+# github.com/rai-project/microbench
 github.com/rai-project/model
 github.com/rai-project/monitoring
 github.com/rai-project/mxnet
@@ -93,7 +93,7 @@ github.com/rai-project/ml-arc-web
 github.com/rai-project/tegra
 github.com/rai-project/nvprof
 github.com/rai-project/fpga
-github.com/rai-project/webpage
+# github.com/rai-project/webpage
 github.com/rai-project/cuda_api_tracer
 github.com/rai-project/cgo
 github.com/rai-project/jemalloc
@@ -112,3 +112,5 @@ github.com/rai-project/sys
 github.com/rai-project/acl
 github.com/rai-project/text
 github.com/rai-project/mock-predictor
+github.com/rai-project/batching
+github.com/rai-project/synthetic_load
