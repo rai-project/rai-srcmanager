@@ -107,6 +107,9 @@ github.com/rai-project/tensorcore_bench [private]
 github.com/rai-project/tensorops [private]
 github.com/rai-project/dlperf_website [private]
 github.com/rai-project/dlperf [private]
+github.com/rai-project/daprof [private]
+github.com/rai-project/profile_wrap [private]
+github.com/rai-project/go-pybind [private]
 github.com/rai-project/sys
 github.com/rai-project/acl
 github.com/rai-project/text
