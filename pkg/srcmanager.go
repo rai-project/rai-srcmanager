@@ -49,6 +49,48 @@ func githubURL(isPublic bool, url string) string {
 	return re.ReplaceAllString(url, "git@github.com:${1}.git")
 }
 
+func githubURLFromDir(path string, isPublic bool, url string) string {
+	if isGitDir(path) {
+		return remoteGitURL(path)
+	}
+
+	if isPublic {
+		return re.ReplaceAllString(url, "https://github.com/${1}.git")
+	}
+	return re.ReplaceAllString(url, "git@github.com:${1}.git")
+}
+
+func isGitDir(path string) bool {
+	if com.IsDir(path) && com.IsDir(filepath.Join(path, ".git")) {
+		return true
+	}
+	return false
+}
+
+func remoteGitURL(path string) string {
+	if !isGitDir(path) {
+		return ""
+	}
+
+	c := exec.Command("git", "config", "--get", "remote.origin.url")
+	c.Dir = path
+	c.Env = envForDir(c.Dir)
+	out, err := c.CombinedOutput()
+	if err != nil {
+		return ""
+	}
+
+	localRemote := strings.TrimSpace(string(out))
+	return localRemote
+}
+
+func isPublicURL(path string) bool {
+	if !isGitDir(path) {
+		return false
+	}
+	return strings.HasPrefix(remoteGitURL(path), "http")
+}
+
 func Commit(isPublic bool, message string) error {
 	rawURLs, err := RepositoryURLs(isPublic)
 	if err != nil {
@@ -59,13 +101,17 @@ func Commit(isPublic bool, message string) error {
 	for _, rawURL := range rawURLs {
 		go func(rawURL string) {
 			defer wg.Done()
+			repoIsPublic := isPublic
 			// defer log.Debug("Processed " + rawURL)
-			cloneURL := githubURL(isPublic, rawURL)
 			targetDir, err := getSrcPath(rawURL)
 			if err != nil {
 				log.WithError(err).Error("Cannot get source path for " + rawURL)
 				return
 			}
+			if isPublicURL(targetDir) {
+				repoIsPublic = true
+			}
+			cloneURL := githubURL(repoIsPublic, rawURL)
 
 			repo, err := NewGitRepo(cloneURL, targetDir)
 			if err != nil {
@@ -102,8 +148,8 @@ func Update(isPublic bool) error {
 	for _, rawURL := range rawURLs {
 		go func(rawURL string) {
 			defer wg.Done()
+			repoIsPublic := isPublic
 			// defer log.Debug("Processed " + rawURL)
-			cloneURL := githubURL(isPublic, rawURL)
 			targetDir, err := getSrcPath(rawURL)
 			if err != nil {
 				log.WithError(err).Error("Cannot get source path for " + rawURL)
@@ -113,6 +159,11 @@ func Update(isPublic bool) error {
 			if com.IsDir(targetDir) && !com.IsDir(filepath.Join(targetDir, ".git")) {
 				return
 			}
+			if isPublicURL(targetDir) {
+				repoIsPublic = true
+			}
+
+			cloneURL := githubURLFromDir(targetDir, repoIsPublic, rawURL)
 
 			repo, err := NewGitRepo(cloneURL, targetDir)
 			if err != nil {
@@ -149,13 +200,16 @@ func Dirty(isPublic bool) error {
 	for _, rawURL := range rawURLs {
 		go func(rawURL string) {
 			defer wg.Done()
-
-			cloneURL := githubURL(isPublic, rawURL)
+			repoIsPublic := isPublic
 			targetDir, err := getSrcPath(rawURL)
 			if err != nil {
 				log.WithError(err).Error("Cannot get source path for " + rawURL)
 				return
 			}
+			if isPublicURL(targetDir) {
+				repoIsPublic = true
+			}
+			cloneURL := githubURLFromDir(targetDir, repoIsPublic, rawURL)
 
 			if com.IsDir(targetDir) && !com.IsDir(filepath.Join(targetDir, ".git")) {
 				return
