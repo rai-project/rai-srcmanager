@@ -6,6 +6,8 @@ import (
 	"bytes"
 	"compress/gzip"
 	"encoding/base64"
+	"fmt"
+	"io"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -100,7 +102,24 @@ func (f *_escFile) Close() error {
 }
 
 func (f *_escFile) Readdir(count int) ([]os.FileInfo, error) {
-	return nil, nil
+	if !f.isDir {
+		return nil, fmt.Errorf(" escFile.Readdir: '%s' is not directory", f.name)
+	}
+
+	fis, ok := _escDirs[f.local]
+	if !ok {
+		return nil, fmt.Errorf(" escFile.Readdir: '%s' is directory, but we have no info about content of this dir, local=%s", f.name, f.local)
+	}
+	limit := count
+	if count <= 0 || limit > len(fis) {
+		limit = len(fis)
+	}
+
+	if len(fis) == 0 && count > 0 {
+		return nil, io.EOF
+	}
+
+	return fis[0:limit], nil
 }
 
 func (f *_escFile) Stat() (os.FileInfo, error) {
@@ -191,27 +210,25 @@ func _escFSMustString(useLocal bool, name string) string {
 var _escData = map[string]*_escFile{
 
 	"/repositories": {
+		name:    "repositories",
 		local:   "repositories",
-		size:    3861,
-		modtime: 1553449213,
+		size:    3894,
+		modtime: 1554856175,
 		compressed: `
-H4sIAAAAAAAC/4yXQY4rNwxE93OKD2Td+cBscoHcIggMtsSWOaZEgWK3x//0Qc8k2ZXs9StTMlUsqYvE
-dV9/T1Z/OsnS3T44xU/ydJWD3xDe4wrZfSC0ut3YId1rP9iHWEOSRNvGU/iOaNVqmXUk67iCCreAtGaI
-Wtwgs7ZJmdDgT7ymOVeFtO8QhVTc6rRnkrYZ4pmCVhqwUVlPxeDAgs2p8t38hiVKD7zFbOn2jG6ivKy7
-aMbKP/9XDlzs3tQoV2pUcCWuJPAo+CDdKSbeLbZM7fsff58JJj478d5DJlxl/ehcJor62fChFls65az8
-46/uclDw31Npn+0luA1znyx2Dg6m2YLbgbkV5aS2w5kteHiK94TYlUlx+EmlAk9YmkKmOVG6YizrDf5Z
-tXTDrEwsXSldpcFVK4dLGm+//UACSW4rtwQb8hW6GDYJc2nQklM/Nst84c9uHvgvtkOy0IuyZVTBiqpL
-gZH5PRmYOqniTnT2zbxSS7iEdNbJYXWVBjff3c4IhHhfx74i6iQTtHxn8XKY7pVnwhs/CreJImMWrFIl
-sBWdKcWSrHZr3AKGvXOREf6YVVKmwUuYKSwzklNg2w9Ojo072IVUfmE7DvZjTgU7ZYT5BDpThfQxguss
-UL5ze1O7zxU42cM8Xf94foeEU8I92EPw6ew79tIhnT2oDCz49Xxzd4bj8vnxPnBvihNOmHNMEd16IWza
-O699cvWcD74LdbnMm5pwvn1wJVVLkxVae1L+fBU8vo4fBtEcW2ufOGLHUFnxRUh5JZ0m7PnxMYJbvGDO
-L5Ofz/PL1/336i+sj+fSrOd9cLnzOiT4Vf0LOjoN9lz3721xuTv11956j1Vafi4dDzgZlBR3Dn8gVUu3
-pTtnSWH40/LM6skzYzxaXDkkXU6bvP0TAAD//9i901IVDwAA
+H4sIAAAAAAAC/4yXTY4rNwyE93OKB2TdecBscoHcIggMtsSWaVOiQLH9804f9EySXclef2VKpooldZE4
+7+vvyepPJ1m624VT/CRPZ7nxB8J7nCG7D4RWtys7pHvtN/Yh1pAk0bbxFH4iWrVaZh3JOq6gwi0grRmi
+FlfIrG1SJjT4gdc056qQ9h2ikIpbnfZM0jZDPFPQSgM2KuuhGBxYsDlVvptfsUTpibeYLV1f0U2Ul3UX
+zVj55//KgYvdmxrlSo0KrsSVBB4F30h3iol3iy1T+/7HP2eCic8OvPeQCVdZL53LRFEfDR9qsaVTzso/
+/uouNwr+eyrts70Et2Huk8WOwcE0W3C7YW5FOantcGYLHp7iPSF2ZlIcflKpwBOWppBpTpTOGMt6hX9W
+LV0xKxNLV0pnaXDVyuGSxsdvP5BAktvKLcGGfIUuhk3CXBq05NSPzTKf+NHNA//FdpMs9KZsGVWwoupS
+YGR+TwamTqq4E519M6/UEi4hnXVyWF2lwc13tyMCId7Xsa+IOskELd9ZvNxM98oz4ZWfhdtEkTELVqkS
+2IrOlGJJVrs1bgHD3rnICH/OKinT4CXMFJYZySmw7Qcnx8Yd7EIqv7AdB/ttTgU7ZYT5BDpThfQ5guss
+UL5ze1O7zxU42cM8nf94fYeEU8I92EPw6ew79tJNOntQGVjw6/Xm7gzH5XH5HLg3xQknzDGmiG69EDbt
+ndc+uXqOB9+JupzmTU043y5cSdXSZIXWXpQ/XgXPr+OHQTTH1toDR+wYKiu+CCmvpNOEPT4+RnCLN8z5
+ZfLjeX76uv/e/YX18Vqa9bgPTndehwS/q39DR4fBXuv+vS1Od6f+3lvvuUrLr6XjCSeDkuLO4Q+kaum6
+dOcsKQx/Wh5ZPXlmXIw3l0xPvPEWZw5Jp8NHH/8EAAD//w5TuRo2DwAA
 `,
 	},
-
-	"/": {
-		isDir: true,
-		local: "",
-	},
 }
+
+var _escDirs = map[string][]os.FileInfo{}
