@@ -6,8 +6,6 @@ import (
 	"bytes"
 	"compress/gzip"
 	"encoding/base64"
-	"fmt"
-	"io"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -102,24 +100,7 @@ func (f *_escFile) Close() error {
 }
 
 func (f *_escFile) Readdir(count int) ([]os.FileInfo, error) {
-	if !f.isDir {
-		return nil, fmt.Errorf(" escFile.Readdir: '%s' is not directory", f.name)
-	}
-
-	fis, ok := _escDirs[f.local]
-	if !ok {
-		return nil, fmt.Errorf(" escFile.Readdir: '%s' is directory, but we have no info about content of this dir, local=%s", f.name, f.local)
-	}
-	limit := count
-	if count <= 0 || limit > len(fis) {
-		limit = len(fis)
-	}
-
-	if len(fis) == 0 && count > 0 {
-		return nil, io.EOF
-	}
-
-	return fis[0:limit], nil
+	return nil, nil
 }
 
 func (f *_escFile) Stat() (os.FileInfo, error) {
@@ -210,10 +191,9 @@ func _escFSMustString(useLocal bool, name string) string {
 var _escData = map[string]*_escFile{
 
 	"/LICENSE.TXT": {
-		name:    "LICENSE.TXT",
 		local:   "LICENSE.TXT",
 		size:    1736,
-		modtime: 1554773202,
+		modtime: 1519313858,
 		compressed: `
 H4sIAAAAAAAC/7RUy27juBJdX37FQVbdgK7nsRmgd4pFx8TYlCHRncmSlsoRJ5IokFQC//2AVOJ2T9aT
 TYBSnTqPKnptp4szz13Al+Yrfv/1tz8y5Kd27lHolxf9grzvkRo8HHlyr9SuGCvolXo7UYvT5Rv+d4tg
@@ -233,6 +213,9 @@ g3ytRCljYIk0X6sMUGWlfqAfRc0z5JWoU1ibqtxnSIGXmyVSGcGSL6PiOpb0rquLTbFwrPmNqILnOyEf
 apYQt4AV+ycAAP//s0SJlsgGAAA=
 `,
 	},
-}
 
-var _escDirs = map[string][]os.FileInfo{}
+	"/": {
+		isDir: true,
+		local: "",
+	},
+}

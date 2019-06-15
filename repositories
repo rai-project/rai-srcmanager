@@ -117,3 +117,22 @@ github.com/rai-project/mock-predictor
 github.com/rai-project/batching
 github.com/rai-project/joefriday
 github.com/rai-project/synthetic_load
+github.com/rai-project/mlperf_loadgen [private]
+github.com/rai-project/onnx_examples [private]
+github.com/rai-project/edge_tpu [private]
+github.com/rai-project/cuda_jit [private]
+github.com/rai-project/lib_log_parser [private]
+github.com/rai-project/mlmodelscope_docs_dev [private]
+github.com/rai-project/deepscope [private]
+github.com/rai-project/profile_wrap [private]
+github.com/rai-project/go-microbench [private]
+github.com/rai-project/go-vtune [private]
+github.com/rai-project/go-tflite [private]
+github.com/rai-project/tflite [private]
+github.com/rai-project/onnx_gen_models [private]
+github.com/rai-project/go-onnxruntime [private]
+github.com/rai-project/go-menoh [private]
+github.com/rai-project/menoh [private]
+github.com/rai-project/go-tvm [private]
+github.com/rai-project/tvm [private]
+
