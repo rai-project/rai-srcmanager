@@ -135,4 +135,5 @@ github.com/rai-project/go-menoh [private]
 github.com/rai-project/menoh [private]
 github.com/rai-project/go-tvm [private]
 github.com/rai-project/tvm [private]
-
+github.com/rai-project/go-openvino [private]
+github.com/rai-project/openvino [private]
