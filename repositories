@@ -117,6 +117,7 @@ github.com/rai-project/mock-predictor
 github.com/rai-project/batching
 github.com/rai-project/joefriday
 github.com/rai-project/synthetic_load
+https://github.com/rai-project/go-echarts
 github.com/rai-project/mlperf_loadgen [private]
 github.com/rai-project/onnx_examples [private]
 github.com/rai-project/edge_tpu [private]
